@@ -12,6 +12,7 @@ if ( $ed_jobposting && jobscout_is_wp_job_manager_activated() && $job_title  ) {
     ?>
     <section id="job-posting-section" class="top-job-section">
         <div class="container">
+        <?php the_company_logo('thumbnail'); ?>
             <?php 
                 if( $job_title ) echo '<h2 class="section-title">'. esc_html( $job_title ) .'</h2>'; 
                 if( jobscout_is_wp_job_manager_activated() && $count_posts->publish != 0 ){ ?>
