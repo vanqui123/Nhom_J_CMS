@@ -6,8 +6,8 @@
  */
 
 $ed_banner         = get_theme_mod( 'ed_banner_section', true );
-$banner_title      = get_theme_mod( 'banner_title', __( 'Aim Higher, Dream Bigger', 'jobscout' ) );
-$banner_subtitle   = get_theme_mod( 'banner_subtitle', __( 'Each month, more than 7 million JobScout turn to website in their search for work, making over 160,000 applications every day.', 'jobscout' ) );
+$banner_title      = get_theme_mod( 'banner_title', __( 'FIND YOUR DREAM JOBS', 'jobscout' ) );
+$banner_subtitle   = get_theme_mod( 'banner_subtitle', __( 'I often wonder what the secret to success is. Especially when it comes to business. Because, at the end of the day, we\'re all in this struggle. A rat race, if you will. ', 'jobscout' ) );
 $find_a_job_link   = get_option( 'job_manager_jobs_page_id', 0 );
         
 if( $ed_banner && has_custom_header() ){ ?>
@@ -16,7 +16,7 @@ if( $ed_banner && has_custom_header() ){ ?>
             <?php the_custom_header_markup(); ?>
             <div class="banner-caption">
                 <div class="container">
-                    <div class="caption-inner">
+                    <div class="caption-inner text-start">
                         <?php 
                             if( $banner_title ) echo '<h2 class="title">' . esc_html( $banner_title ) . '</h2>';
                             if( $banner_subtitle ) echo '<div class="description">' . wpautop( wp_kses_post( $banner_subtitle ) ) . '</div>';
