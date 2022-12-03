@@ -35,9 +35,13 @@ $company_name = get_post_meta(get_the_ID(), '_company_name', true);
 			<a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
 		</h3>
 
-		<?php if ($company_name) { ?>
+	
 			<div class="company-name" id="time-date">
-				<?php the_job_publish_date(); ?>
+			<div><span style="font-size: 15px;
+    color: gray;
+    font-weight: 500;">Created:</span> <time style="font-size: 15px;
+    color: gray;
+    font-weight: 500;" datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time> </div>
 			</div>
 			<div>
 				<?php
@@ -47,8 +51,8 @@ $company_name = get_post_meta(get_the_ID(), '_company_name', true);
 							<li id="item-job-type" class="job-type <?php echo esc_attr(sanitize_title($jobtype->slug)); ?>">
 								<div id="container">
 									<div class=""><?php echo esc_html($jobtype->name); ?> </div>
-									<div class="item-information"><?php the_company_name(); ?></div>
-									<div class="item-information"><?php the_job_location(true); ?></div>
+									<div class="infor"><?php the_company_name(); ?></div>
+									<div class="infor"><?php the_job_location(true); ?></div>
 								</div>
 							</li>
 				<?php endforeach;
@@ -57,7 +61,7 @@ $company_name = get_post_meta(get_the_ID(), '_company_name', true);
 				?>
 
 			</div>
-		<?php } ?>
+	
 
 		<div class="entry-meta">
 			<?php
