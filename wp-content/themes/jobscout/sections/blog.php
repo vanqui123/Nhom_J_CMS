@@ -5,11 +5,12 @@
  * @package JobScout
  */
 
-$blog_heading = get_theme_mod( 'blog_section_title', __( 'Latest Articles', 'jobscout' ) );
+$blog_heading = get_theme_mod( 'blog_section_title', __( 'NEWEST BLOG ENTRIES', 'jobscout' ) );
 $sub_title    = get_theme_mod( 'blog_section_subtitle', __( 'We will help you find it. We are your first step to becoming everything you want to be.', 'jobscout' ) );
 $blog         = get_option( 'page_for_posts' );
 $label        = get_theme_mod( 'blog_view_all', __( 'See More Posts', 'jobscout' ) );
 $hide_author  = get_theme_mod( 'ed_post_author', false );
+$description  = get_theme_mod( 'ed_post_description', false );
 $hide_date    = get_theme_mod( 'ed_post_date', false );
 $ed_blog      = get_theme_mod( 'ed_blog', true );
 
@@ -27,13 +28,14 @@ if( $ed_blog && ( $blog_heading || $sub_title || $qry->have_posts() ) ){ ?>
 	<div class="container">
         <?php 
             if( $blog_heading ) echo '<h2 class="section-title">' . esc_html( $blog_heading ) . '</h2>';
-            if( $sub_title ) echo '<div class="section-desc">' . wpautop( wp_kses_post( $sub_title ) ) . '</div>'; 
+            
         ?>
         
         <?php if( $qry->have_posts() ){ ?>
            <div class="article-wrap">
     			<?php 
                 while( $qry->have_posts() ){
+                    
                     $qry->the_post(); ?>
                     <article class="post">
         				<figure class="post-thumbnail">
@@ -48,14 +50,19 @@ if( $ed_blog && ( $blog_heading || $sub_title || $qry->have_posts() ) ){ ?>
                             </a>
                         </figure>
                         <header class="entry-header">
-                            <div class="entry-meta">
-                                <?php 
-                                    if( ! $hide_author ) jobscout_posted_by(); 
-                                    if( ! $hide_date ) jobscout_posted_on();
-                                ?> 
-                            </div>
+                          
                             <h3 class="entry-title">
                                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            </h3>
+                            <div class="entry-description">
+                                <?php 
+                                    if( ! $description )  
+                                    echo wp_trim_words( get_the_content(), 15, '...');
+                                   
+                                ?> 
+                            </div>
+                            <h3 class="entry-link">
+                                <a href="<?php the_permalink(); ?>">Read More</a>
                             </h3>
                         </header>
         			</article>			
@@ -74,5 +81,7 @@ if( $ed_blog && ( $blog_heading || $sub_title || $qry->have_posts() ) ){ ?>
         <?php } ?>
 	</div>
 </section>
+<link rel="stylesheet" href="./css/3-job.css">
 <?php 
+
 }

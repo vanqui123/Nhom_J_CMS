@@ -1,0 +1,9 @@
+article.post {
+    width: 100%;
+    float: left;
+}
+
+.page-template-default figure.post-thumbnail {
+    float: left;
+    width: 30%;
+}
