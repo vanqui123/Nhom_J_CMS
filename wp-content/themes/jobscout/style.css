@@ -1814,7 +1814,7 @@ SIDEBARS
     
     .rightsidebar #primary {
         float: left;
-        width: 75%;
+        width: 100%;
         padding-right: 40px;
     }
     
@@ -3152,9 +3152,9 @@ LIST VIEW
     }
     
     .list-view .site-main article .post-thumbnail {
-        display: inline-block;
+        /* display: inline-block;
         vertical-align: middle;
-        width: 45%;
+        width: 45%; */
     }
     
     .list-view .site-main article .post-thumbnail a {
@@ -3171,7 +3171,6 @@ LIST VIEW
         display: inline-block;
         vertical-align: middle;
         width: 54%;
-        padding: 20px 25px;
     }
     
     .list-view .site-main article .entry-meta {
@@ -7944,16 +7943,11 @@ RESPONSIVE STYLESHEET
     }
     
     .article-section .article-wrap header.entry-header {
-        /* float: left; */
-        /* width: 101%; */
         margin: 12px;
         padding: 0;
         display: flex;
-        /* align-items: center; */
-        /* justify-items: center; */
         flex-wrap: wrap;
         height: 80%;
-        /* flex-direction: row; */
     }
     
     .entry-description {
@@ -7974,3 +7968,60 @@ RESPONSIVE STYLESHEET
     .article-section .article-wrap article {
         background-color: #fff;
     }
+
+.blog aside#secondary {
+    display: none;
+}
+.blog .content-area {
+    padding-right: 0 !important;
+}
+.blog main#main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    text-align: left;
+}
+.blog .entry-meta {
+    display: none;
+}
+.blog figure.post-thumbnail {
+    float: left;
+    width: 39.4% !important;
+    margin: 18px;
+}
+.blog header.entry-header {
+    flex-wrap: wrap;
+}
+.blog a.readmore-link {
+    color: #f1a52c;
+    font-weight: bold;
+}
+.blog .entry-content {
+    font-size: 15px;
+    color: #777;
+    font-weight: 300;
+}
+.blog .content-wrap {
+    display: grid;
+    vertical-align: middle;
+    width: 54%;
+    padding: 20px 5px;
+    align-items: center;
+}
+.blog article{
+    margin-bottom: 0 !important;
+    background: #fff;
+}
+.blog .entry-title a{
+    font-weight: 700;
+}
+.blog .site-content{
+    margin: 0 !important;
+    background: #f2f2f2;
+    padding: 15px 0;
+}
+.blog h2.header-title {
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 800;
+}
