@@ -7991,3 +7991,66 @@ RESPONSIVE STYLESHEET
     font-weight: 600 !important;
   }
   
+/* Module5 */
+.blog aside#secondary {
+    display: none;
+}
+.blog .content-area {
+    padding-right: 0 !important;
+}
+.blog main#main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    text-align: left;
+}
+.blog .entry-meta {
+    display: none;
+}
+.blog figure.post-thumbnail {
+    float: left;
+    width: 39.4% !important;
+    margin: 18px;
+}
+.blog header.entry-header {
+    flex-wrap: wrap;
+}
+.blog a.readmore-link {
+    color: #f1a52c;
+    font-weight: bold;
+}
+.blog .entry-content {
+    font-size: 15px;
+    color: #777;
+    font-weight: 300;
+}
+.blog .content-wrap {
+    display: grid;
+    vertical-align: middle;
+    width: 54%;
+    padding: 20px 5px;
+    align-items: center;
+}
+.blog article{
+    margin-bottom: 0 !important;
+    background: #fff;
+}
+.blog .entry-title a{
+    font-weight: 700;
+}
+.blog .site-content{
+    margin: 0 !important;
+    background: #f2f2f2;
+    padding: 15px 0;
+}
+.blog h2.header-title {
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 800;
+}
+.page h2.header-title {
+    display: none !important;
+}
+.blog span.edit-link {
+    display: none;
+}
