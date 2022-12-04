@@ -8056,3 +8056,23 @@ RESPONSIVE STYLESHEET
 .blog span.edit-link {
     display: none;
 }
+
+
+
+
+/* Lê Ngô Anh Vũ */
+.page .job_listings.danhsach-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    text-align: left;
+    background: #f2f2f2;
+    left: 0 !important;
+    padding-top: 20px;
+}
+.page div#content {
+    background: #f2f2f2;
+}
+.page aside#secondary {
+    display: none;
+}
